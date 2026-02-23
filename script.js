@@ -5,6 +5,7 @@ const totalCount = document.getElementById("totalCount")
 const interviewCount = document.getElementById("interviewCount")
 const rejectedCount = document.getElementById("rejectedCount")
 const numCount = document.getElementById("numCount")
+const emptyState = document.getElementById("emptyState");
 
 
 let currentTab = "all"
@@ -34,6 +35,7 @@ function updateCounts(){
 // Render Filter
 
 function renderFilter(){
+   let anyVisible = false;
    for(const card of jobContainer.children){
       const statusText = card.querySelector(".status").innerText;
       if(currentTab === "all"){
@@ -43,7 +45,9 @@ function renderFilter(){
       } else if (currentTab === "rejected"){
          card.style.display = statusText === "Rejected" ? "block": "none";
       }
+       if (card.style.display !== "none") anyVisible = true;
       }
+       emptyState.style.display = anyVisible ? "none" : "block";
 
       updateCounts();
    }
