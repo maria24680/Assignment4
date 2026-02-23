@@ -24,18 +24,18 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
         <div class="bg-white shadow-xl rounded-xl inline-block max-w-96 py-5">
             <p class="text-sm text-[#323B49] mx-2">Total</p>
-            <p id="totalcount" class="font-bold text-2xl mx-2">8</p>
+            <p id="totalCount" class="font-bold text-2xl mx-2">8</p>
         </div>
 
           <div class="bg-white shadow-xl rounded-xl inline-block max-w-96 py-5">
             <p class="text-sm text-[#323B49] mx-2">Interview</p>
-            <p id="interviewcount" class="font-bold text-2xl mx-2 text-green-600">0</p>
+            <p id="interviewCount" class="font-bold text-2xl mx-2 text-green-600">0</p>
         </div>
 
 
           <div class="bg-white shadow-xl rounded-xl inline-block w-96 py-5">
             <p class="text-sm text-[#323B49] mx-2">Rejected</p>
-            <p id="rejectedcount" class="font-bold text-2xl mx-2 text-red-600">0</p>
+            <p id="rejectedCount" class="font-bold text-2xl mx-2 text-red-600">0</p>
         </div>
     </div>
 
@@ -43,15 +43,18 @@
 
 <hr class="my-8 text-[#E6E7E9]">
 <main class="my-5 space-y-2">
+  <div class="flex justify-between items-center mb-2">
     <h3>Available Jobs</h3>
+    <span id="numCount" class="text-sm">8 job</span></div>
+    </div>
     <div class="flex gap-4">
-    <button class="px-6 py-2 bg-blue-600 text-white shadow-lg active:scale-75 transition-all duration-300">All</button>
-    <button class="px-6 py-2 text-black shadow-lg active:scale-75 transition-all duration-300">Interview</button>
-    <button class="px-6 py-2 text-black shadow-lg active:scale-75 transition-all duration-300">Rejected</button>
+    <button id="all-filter-btn" class="px-6 py-2 bg-blue-600 text-white shadow-lg active:scale-75 transition-all duration-300">All</button>
+    <button id="interview-filter-btn" class="px-6 py-2 text-black shadow-lg active:scale-75 transition-all duration-300">Interview</button>
+    <button id="rejected-filter-btn" class="px-6 py-2 text-black shadow-lg active:scale-75 transition-all duration-300">Rejected</button>
         </div>
 
 <!-- card -->
-<section id="jobcontainer">
+<section id="jobContainer">
 <!-- card_1 -->
    <div class="bg-white shadow-xl p-4 rounded-xl space-y-3 my-5">
 <div class="flex justify-between">
@@ -264,6 +267,16 @@
 
 </section>
 </main>
+
+<section>
+    <div class="bg-white shadow-xl p-4 rounded-xl space-y-3 my-5 text-center ">
+<img class="mx-auto" src="./jobs.png" alt="">
+<p class="job_type opacity-60 text-xl">No Job Available</p>
+
+</div> 
+</section>
+
+<script src="./script.js"></script>
 
 
 
