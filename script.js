@@ -6,6 +6,7 @@ const interviewCount = document.getElementById("interviewCount")
 const rejectedCount = document.getElementById("rejectedCount")
 const numCount = document.getElementById("numCount")
 
+
 let currentTab = "all"
 
 // Update Counts
@@ -27,7 +28,7 @@ function updateCounts(){
    totalCount.innerText = total;
    interviewCount.innerText = interview;
    rejectedCount.innerText = rejected;
-   numCount.innerText = total + " job";
+   numCount.innerText = total + " Job";
 }
 
 // Render Filter
